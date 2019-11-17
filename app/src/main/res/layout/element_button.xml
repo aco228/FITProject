@@ -1,0 +1,17 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:orientation="vertical"
+  android:layout_width="93dp"
+  android:layout_height="93dp"
+  android:background="@drawable/shape_camerabutton">
+
+  <ImageView
+    android:id="@+id/img_buttonInside"
+    android:alpha="0"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="6dp"
+    android:src="@drawable/shape_camerabutton_success"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

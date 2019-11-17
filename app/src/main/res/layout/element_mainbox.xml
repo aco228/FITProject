@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@android:color/transparent"
+  android:orientation="vertical">
+
+
+  <!--
+    Mainbox
+    originalTop: 0
+    starting: 320dp
+  -->
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/cl_mainbox"
+    android:layout_width="350dp"
+    android:layout_height="280dp"
+    android:layout_marginBottom="40dp"
+    android:background="@drawable/shape_mainbox"
+    android:translationY="320dp"
+    android:alpha="0"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+
+    <TextView
+      android:id="@+id/tw_boxHeader"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="50dp"
+      android:text="ЈЕСТЕ"
+      android:textColor="@android:color/holo_green_dark"
+      android:textSize="45dp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <TextView
+      android:id="@+id/tw_subHeader"
+      android:layout_width="200dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="0dp"
+      android:text="Ово је винстон дуги тамни"
+      android:textAlignment="center"
+      android:textColor="@android:color/holo_green_dark"
+
+      android:textSize="20dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tw_boxHeader"></TextView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="250dp"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="15dp"
+      android:background="@drawable/shape_vjerovatnoca_holder"
+      android:paddingLeft="15dp"
+      android:paddingTop="5dp"
+      android:paddingBottom="5dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent">
+
+      <!-- Vjerovatnoca za winston -->
+
+      <TextView
+        android:id="@+id/tw_vjWinston"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50%"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+      <TextView
+        android:id="@+id/tw_vjWinston_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" да је винстон!"
+        app:layout_constraintStart_toEndOf="@+id/tw_vjWinston"
+        app:layout_constraintTop_toTopOf="parent" />
+
+      <!-- Vjerovatnoca za upaljac -->
+
+      <TextView
+        android:id="@+id/tw_vjUpaljac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50%"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tw_vjWinston" />
+
+      <TextView
+        android:id="@+id/tw_vjUpaljac_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" да је упаљач!"
+        app:layout_constraintStart_toEndOf="@+id/tw_vjUpaljac"
+        app:layout_constraintTop_toBottomOf="@+id/tw_vjWinston_text" />
+
+
+      <!-- Vjerovatnoca za upaljac -->
+
+      <TextView
+        android:id="@+id/tw_vjOstalo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50%"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tw_vjUpaljac" />
+
+      <TextView
+        android:id="@+id/tw_vjOstalo_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" да је нешто недефинисано!"
+        app:layout_constraintStart_toEndOf="@+id/tw_vjOstalo"
+        app:layout_constraintTop_toBottomOf="@+id/tw_vjUpaljac_text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <!--
+    OPEN: marginBototm: 280dp
+    CLOSED: marginBotton: 80
+  -->
+
+  <include
+    android:id="@+id/cl_cameraButton"
+    layout="@layout/element_button"
+    android:layout_width="89dp"
+    android:layout_height="89dp"
+    android:layout_marginBottom="80dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

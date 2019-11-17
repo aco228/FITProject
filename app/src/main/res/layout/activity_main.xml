@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ako.fit.project.elements.DrawerOverride
+  android:id="@+id/drawerLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:resizeableActivity="true"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".MainActivity">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/cl_mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextureView
+      android:id="@+id/view_finder"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+      android:id="@+id/ll_layout"
+      android:alpha="0 "
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="#8f000000"
+      />
+
+    <ImageView
+      android:id="@+id/img_main"
+      android:layout_width="match_parent"
+      android:layout_height="350dp"
+      android:alpha="0"
+      android:scaleType="centerCrop"
+      android:src="@drawable/test_camera"
+      android:layout_marginBottom="100dp"
+      android:layout_marginLeft="15dp"
+      android:layout_marginRight="15dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"/>
+
+    <include
+      android:elevation="10dp"
+      layout="@layout/element_mainbox"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginBottom="0dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <com.google.android.material.navigation.NavigationView
+    android:id="@+id/navigationView"
+    android:layout_width="340dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="start|left"
+    android:fitsSystemWindows="true">
+    <include layout="@layout/navigation_drawer"/>
+  </com.google.android.material.navigation.NavigationView>
+
+</ako.fit.project.elements.DrawerOverride>
